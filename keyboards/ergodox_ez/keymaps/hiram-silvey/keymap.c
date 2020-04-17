@@ -70,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [FN_MDIA] = LAYOUT_ergodox(
 	// left hand
 	VRSN, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+	KC_TRNS, KC_TRNS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS,
+	KC_TRNS, KC_TRNS, KC_MPLY, KC_MPRV, KC_MNXT, KC_TRNS,
 	KC_TRNS, KC_TRNS, KC_TRNS, KC_BRID, KC_BRIU, KC_TRNS, KC_TRNS,
-	KC_TRNS, KC_TRNS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS,
-	KC_TRNS, KC_TRNS, KC_MPLY, KC_MPRV, KC_MNXT, KC_TRNS, KC_TRNS,
 	KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 	KC_TRNS, KC_TRNS,
 	KC_TRNS,
@@ -108,7 +108,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 				SEND_STRING(SS_LALT(SS_LSFT("-")));
 				break;
 			case E_VSLZ:
-				SEND_STRING(SS_LCTL("x")"u");
+				SEND_STRING(SS_LCTL("u")"u");
 				break;
 			case E_HOME:
 				SEND_STRING(SS_LALT(SS_LSFT(",")));
@@ -117,13 +117,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 				SEND_STRING(SS_LALT(SS_LSFT(".")));
 				break;
 			case T_PREV:
-				SEND_STRING(SS_LCTL("b")"p");
+				SEND_STRING(SS_TAP(X_F9)"p");
 				break;
 			case T_NEXT:
-				SEND_STRING(SS_LCTL("b")"n");
+				SEND_STRING(SS_TAP(X_F9)"n");
 				break;
 			case T_PRFX:
-				SEND_STRING(SS_LCTL("b"));
+				SEND_STRING(SS_TAP(X_F9));
 				break;
 		}
 	}
