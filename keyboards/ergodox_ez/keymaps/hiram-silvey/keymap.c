@@ -17,6 +17,7 @@ enum custom_keycodes {
 	EPRM = SAFE_RANGE,
 #endif
 	VRSN,
+  LCLR,
 	E_VSLZ,
 	E_UNDO,
 	E_REDO,
@@ -34,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_LCTL, KC_A, KC_O, KC_E, KC_U, KC_I,
 	KC_LSFT, KC_SCLN, KC_Q, KC_J, KC_K, KC_X, KC_CAPS,
 	E_VSLZ, MO(NUM), MO(NAV), MO(FN), MO(MDIA),
-	KC_COPY, KC_PSTE,
+	LCTL(KC_LALT), KC_MEH,
   TG(GAME),
 	KC_SPC, KC_TAB, KC_LGUI,
 	// right hand
@@ -43,8 +44,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_D, KC_H, KC_T, KC_N, KC_S, KC_MINS,
 	KC_DEL, KC_B, KC_M, KC_W, KC_V, KC_Z, KC_RSFT,
 	T_PREV, T_NEXT, E_UNDO, E_REDO, T_PRFX,
-	KC_PSCR, KC_FIND,
-	KC_SYSREQ,
+	KC_HYPR, RGUI(KC_RSFT),
+	LCLR,
 	KC_RGUI, KC_ENT, KC_BSPC
 ),
 [NUM] = LAYOUT_ergodox(
@@ -158,6 +159,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 			case VRSN:
 				SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
 				return false;
+      case LCLR:
+        layer_clear();
+        return false;
 			case E_UNDO:
 				SEND_STRING(SS_LCTL("/"));
 				break;
