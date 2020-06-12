@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      | Mute |       | Play |      |      |
  *                                 |Space | Left |------|       |------|Right |Back- |
- *                                 |      | Ctrl | LCmd |       | RCmd |  Alt | space|
+ *                                 |      | Alt  | LCmd |       | RCmd | Ctrl | space|
  *                                 `--------------------'       `--------------------'
  */
 [BASE] = LAYOUT_ergodox(
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	TG(GAME), KC_HOME, KC_PGDN, KC_PGUP, KC_END,
 	                                              KC_VOLD, KC_VOLU,
                                                          KC_MUTE,
-                         	             KC_SPC,  KC_LCTL, KC_LGUI,
+                         	             KC_SPC,  KC_LALT, KC_LGUI,
 	// Right hand
 	KC_GRV,  KC_ASTR, KC_RPRN, KC_LBRC, KC_RBRC, KC_HASH, KC_DEL,
 	KC_BSLS, KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_ENT,
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	                  KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, KC_CAPS,
 	KC_MPRV, KC_MNXT,
 	KC_MPLY,
-	KC_RGUI, KC_RALT, KC_BSPC
+	KC_RGUI, KC_RCTL, KC_BSPC
 ),
 /* NUM layer
  *
