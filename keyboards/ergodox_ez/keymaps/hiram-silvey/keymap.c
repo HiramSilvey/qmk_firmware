@@ -21,12 +21,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* BASE layer # ^
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | GEsc   |  @   |  !   |  ?   |  (   |  *   |  #   |           |   ^  |   &  |   )  |   [  |   ]  |   =  |    Del |
+ * | Esc    |  @   |  !   |  ?   |  (   |  *   |  #   |           |   ^  |   &  |   )  |   [  |   ]  |   =  |    Del |
  * |--------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
  * | Tab    |  '   |  ,   |  .   |  P   |  Y   |  /   |           |   \  |   F  |   G  |   C  |   R  |   L  |  Enter |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | MO(L1) |  A   |  O   |  E   |  U   |  I   |------|           |------|   D  |   H  |   T  |   N  |   S  |    -   |
- * |--------+------+------+------+------+------|  ~   |           |   %  |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|  `   |           |   %  |------+------+------+------+------+--------|
  * | Lshift |  ;   |  Q   |  J   |  K   |  X   |      |           |      |   B  |   M  |   W  |   V  |   Z  | Rshift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |CpsLck| Home | PgUp | PgDn | End  |                                       | Left |  Up  | Down | Right| PrtSc|
@@ -41,10 +41,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [BASE] = LAYOUT_ergodox(
 	// Left hand
-  KC_GESC,  KC_AT,   KC_EXLM, KC_QUES, KC_LPRN, KC_ASTR, KC_HASH,
+  KC_ESC,   KC_AT,   KC_EXLM, KC_QUES, KC_LPRN, KC_ASTR, KC_HASH,
   KC_TAB,   KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_SLSH,
   MO(NUM),  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,
-  KC_LSFT,  KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_TILD,
+  KC_LSFT,  KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_GRV,
   KC_CAPS,  KC_HOME, KC_PGUP, KC_PGDN, KC_END,
 	                                              KC_VOLD, KC_VOLU,
                                                          KC_MUTE,
